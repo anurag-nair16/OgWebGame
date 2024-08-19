@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #d1c4e9, #b39ddb);
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #3f51b5;
+    margin: 0;
+}
+
+.instructions {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.scoreboard {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #3f51b5;
+}
+
+.scoreboard p {
+    margin: 5px 0;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Flip card container */
+.flip-card {
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer; /* Change cursor to hand symbol */
+    border: 2px solid #e0e0e0; /* Add border */
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: transform 0.3s, border-color 0.3s; /* Smooth transitions */
+  }
+
+/* Flip card inner container */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+/* Flip card front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card.flipped {
+    border-color: #b0bec5; /* Border color when card is flipped */
+    border-radius: 10px;
+  }
+  
+.flip-card.flipped .flip-card-inner {
+transform: rotateY(180deg); /* Maintain flip effect */
+}
+
+/* Style the front side of the card */
+.flip-card-front {
+  background-color: #ffffff;
+  color: #3f51b5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.flip-card.matched {
+    transform: scale(1.1); /* Slightly increase size */
+  }
+  
+
+/* Style the back side of the card */
+.flip-card-back {
+  background-color: #3f51b5;
+  color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #3f51b5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #303f9f;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content h2 {
+    color: #3f51b5;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.modal-content button {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+.modal-content button:hover {
+    background-color: #388e3c;
+}
+
+.modal-content button:active {
+    transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

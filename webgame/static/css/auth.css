@@ -1,0 +1,94 @@
+/* auth.css */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  background: #007bff;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.field input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn input[type="submit"] {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn input[type="submit"]:hover {
+  background: #0056b3;
+}
+
+.link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 12px;
+}
